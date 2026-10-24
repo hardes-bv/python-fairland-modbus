@@ -30,3 +30,21 @@ def test_fairland_error_is_an_exception() -> None:
 
     assert isinstance(error, Exception)
     assert str(error) == "bad value"
+
+
+def test_a_vendored_copy_still_has_a_version(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """Without distribution metadata, the package still imports."""
+    import importlib
+    import importlib.metadata
+
+    def missing(name: str) -> str:
+        raise importlib.metadata.PackageNotFoundError(name)
+
+    monkeypatch.setattr(importlib.metadata, "version", missing)
+    reloaded = importlib.reload(fairland_modbus)
+
+    assert reloaded.__version__ == "0.0.0+vendored"
+    monkeypatch.undo()
+    importlib.reload(fairland_modbus)
