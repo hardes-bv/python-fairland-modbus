@@ -174,7 +174,7 @@ module is written from the register table.
 
 Apache License 2.0, see [LICENSE](LICENSE).
 
-[modbus-connection]: https://github.com/home-assistant-libs/modbus-connection
+[modbus-connection]: https://home-assistant-libs.github.io/modbus-connection/
 [uv]: https://docs.astral.sh/uv/
 [spdr870]: https://github.com/spdr870/fairland_iphcr45_modbus
 [thread]: https://community.home-assistant.io/t/controlling-a-fairland-pool-heatpump-eliminating-tuya/579467
