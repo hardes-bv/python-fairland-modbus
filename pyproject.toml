@@ -15,10 +15,12 @@ keywords = [
     "home-assistant"
 ]
 authors = [
-    { name = "Ringo De Smet", email = "ringo@de-smet.name" }
+    { name = "Ringo De Smet", email = "ringo@de-smet.name" },
+    { name = "chpego", email = "chpego@chpego.fr" },
 ]
 maintainers = [
-    { name = "Ringo De Smet", email = "ringo@de-smet.name" }
+    { name = "Ringo De Smet", email = "ringo@de-smet.name" },
+    { name = "chpego", email = "chpego@chpego.fr" },
 ]
 classifiers = [
     "Programming Language :: Python :: 3",
